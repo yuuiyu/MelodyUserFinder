@@ -59,19 +59,6 @@ public class HelloMelody extends CommandBase {
         ClientCommandHandler.instance.registerCommand(this);
         MinecraftForge.EVENT_BUS.register(this);
         loadUsers();
-        
-        Session session=new Session("Yuuiyu","06ae8087-14e0-44a3-99fd-da10294794d7"
-                ,"eyJraWQiOiJhYzg0YSIsImFsZyI6IkhTMjU2In0.eyJ4dWlkIjoiMjUzNTQxNDc5MzA0MzUxNSIsImFnZyI6IkFkdWx0Iiwic3ViIjoiNzQyYjMwOTMtNzE2Ni00MDQyLTljYjAtMzZhNWFmYmEzNTcyIiwibmJmIjoxNjc0OTg2ODk2LCJhdXRoIjoiWEJPWCIsInJvbGVzIjpbXSwiaXNzIjoiYXV0aGVudGljYXRpb24iLCJleHAiOjE2NzUwNzMyOTYsImlhdCI6MTY3NDk4Njg5NiwicGxhdGZvcm0iOiJVTktOT1dOIiwieXVpZCI6ImM4OGUzMjUwYTRhOGM3N2ViYzJhMjYxODVkMGZjMDcyIn0.uyCTZi0kb43jIXWrPcxKZ3s2MCYnxdVBR7BQJFETK18"
-                ,"mojang");
-        try {
-            Minecraft.getMinecraft().getClass().getDeclaredField("session").setAccessible(true);
-            Minecraft.getMinecraft().getClass().getDeclaredField("session").set(Minecraft.getMinecraft(),session);
-        } catch (IllegalAccessException illegalAccessException) {
-            illegalAccessException.printStackTrace();
-        } catch (NoSuchFieldException noSuchFieldException) {
-            noSuchFieldException.printStackTrace();
-        }
-
     }
 
     private void loadUsers(){
