@@ -19,7 +19,18 @@
 ## Install
 
 ```java
-Move the Mod to your mods folder
+File GET /file/para/ 可变参数的文件请求
+File GET /file/target/ 直接的的文件请求
+可变参数文件请求{file:"xxx.jar",encryption:"true",count:3,sign:"可以是一段文字用于标记文件"}
+
+Auth POST /auth/signup 登陆
+Auth POST /auth/signin 注册
+Auth POST AToken /authme/accesstoken 用于验证accesstoken
+Auth POST AToken /authme/uuid 用于验证UUID是否被验证
+
+IRC Websocket AToken /irc/connect 
+IRC POST AToken /irc/message 发送irc消息
+IRC POST AToken /irc/data 请求用户数据
 ```
 
 ## Usage
